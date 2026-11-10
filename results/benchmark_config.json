@@ -1,0 +1,72 @@
+{
+  "scenarios": {
+    "steady_traffic": {
+      "description": "Steady arrival of requests well within rate limits",
+      "concurrency": 2,
+      "num_requests": 20,
+      "interval_ms": 300,
+      "target_rpm": 20
+    },
+    "sudden_burst": {
+      "description": "Sudden surge of concurrent requests hitting admission queue",
+      "concurrency": 12,
+      "num_requests": 24,
+      "interval_ms": 0,
+      "target_rpm": 120
+    },
+    "sustained_overload": {
+      "description": "High arrival rate exceeding token and request limits continuously",
+      "concurrency": 10,
+      "num_requests": 35,
+      "interval_ms": 50,
+      "target_rpm": 90
+    },
+    "rpm_halved": {
+      "description": "Simulate constrained quota environment with RPM cut to 50%",
+      "concurrency": 4,
+      "num_requests": 20,
+      "interval_ms": 200,
+      "target_rpm": 15
+    },
+    "daily_budget_exhausted": {
+      "description": "Exhaust daily allocation and verify deterministic rejection",
+      "concurrency": 3,
+      "num_requests": 15,
+      "interval_ms": 100,
+      "target_rpm": 30
+    }
+  },
+  "retrieval_configurations": {
+    "A": {
+      "name": "Compact 300-token chunks, top 3 passages, no reranking",
+      "chunk_size": 300,
+      "chunk_overlap": 50,
+      "top_k": 3,
+      "reranking": false
+    },
+    "B": {
+      "name": "Standard 600-token chunks, top 5 passages, no reranking",
+      "chunk_size": 600,
+      "chunk_overlap": 100,
+      "top_k": 5,
+      "reranking": false
+    },
+    "C": {
+      "name": "Enriched 600-token chunks, top 5 passages with BM25/hybrid reranking",
+      "chunk_size": 600,
+      "chunk_overlap": 100,
+      "top_k": 5,
+      "reranking": true
+    }
+  },
+  "cost_model": {
+    "groq_llama33_70b": {
+      "input_per_million_usd": 0.59,
+      "output_per_million_usd": 0.79
+    },
+    "groq_llama31_8b": {
+      "input_per_million_usd": 0.05,
+      "output_per_million_usd": 0.08
+    }
+  }
+}

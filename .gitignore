@@ -1,0 +1,26 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Data artifacts
+data/papers/*.pdf
+!data/papers/.gitkeep
+data/processed/*.json
+data/processed/*.faiss
+data/processed/*.pkl
+
+# Environment & secrets
+.env
+.env.local
+
+# Results & logs
+*.log
+.DS_Store

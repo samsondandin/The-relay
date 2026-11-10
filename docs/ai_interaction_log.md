@@ -20,3 +20,4 @@ This log documents key decisions, promptings, corrections, and engineering hando
 ### 4. Retry Storm Demonstration
 - **Goal**: Demonstrate how uncoordinated retries under exhausted quotas worsen congestion.
 - **Implementation**: Created `test_retry_storm_congestion_demonstration` in `tests/test_rate_limiter.py`. Proved that an aggressive retry policy turned 1 failed request into 3 consecutive quota-depleting requests within milliseconds when backoff jitter and quota reset times were ignored.
+

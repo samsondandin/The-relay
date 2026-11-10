@@ -14,3 +14,4 @@
 
 ## 4. Single-Machine Scope & Storage
 - Indexing and queuing run in-process using Python async primitives (`asyncio.Semaphore`, `asyncio.Lock`, in-memory deques). For enterprise distributed scale, external backends (Redis for token-bucket rate limiting, RabbitMQ/Kafka for request queues, Milvus/Qdrant for vector indices) would be required.
+

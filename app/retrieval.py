@@ -194,3 +194,4 @@ class RetrievalEngine:
             "config_C_passages": len(self.chunks.get("C", [])),
             "retrieval_engine": "scikit-learn TF-IDF + hybrid term-density reranking",
         }
+

@@ -94,3 +94,4 @@ class MetricsAggregator:
 
 
 metrics_collector = MetricsAggregator()
+

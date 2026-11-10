@@ -270,3 +270,4 @@ class RAGPipeline:
         async for chunk in self.model.stream_generate(prompt=prompt, system_prompt=system_prompt):
             yield f"data: {json.dumps(chunk)}\n\n"
         yield "data: [DONE]\n\n"
+

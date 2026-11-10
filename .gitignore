@@ -24,3 +24,4 @@ data/processed/*.pkl
 # Results & logs
 *.log
 .DS_Store
+

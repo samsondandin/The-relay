@@ -103,3 +103,4 @@ async def chat_completions(payload: Dict[str, Any]):
 
     finally:
         in_flight = max(0, in_flight - 1)
+

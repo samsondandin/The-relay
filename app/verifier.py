@@ -89,3 +89,4 @@ class CitationVerifier:
             correction_attempted=False,
             details=details,
         )
+

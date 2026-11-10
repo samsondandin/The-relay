@@ -86,3 +86,4 @@ class AdmissionQueueManager:
                 async with self._lock:
                     self._active_concurrency = max(0, self._active_concurrency - 1)
                 self._semaphore.release()
+

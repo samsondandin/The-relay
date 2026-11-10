@@ -245,3 +245,4 @@ class ModelSimulator(ModelInterface):
                 "elapsed_ms": (t_now - t_start) * 1000.0,
             }
             await asyncio.sleep(self.streaming_chunk_delay_ms / 1000.0)
+

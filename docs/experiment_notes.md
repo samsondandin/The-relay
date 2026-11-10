@@ -37,3 +37,4 @@ Evaluated 15 curated questions across the three target papers across configurati
 - **Scenario 5: Daily Budget Exhausted (N=15)**:
   - Success rate: 20.0% (initial requests before cap), 80.0% rate limited.
   - Retries/Req: exactly 0.00. Proves that the retry policy cleanly refused to retry permanent budget exhaustion.
+

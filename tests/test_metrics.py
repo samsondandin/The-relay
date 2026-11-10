@@ -44,3 +44,4 @@ async def test_metrics_error_and_refusal_tracking():
     assert summary["refused_requests"] == 1
     assert summary["rate_limited_requests"] == 1
     assert summary["failed_requests"] == 1
+

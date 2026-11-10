@@ -38,3 +38,4 @@
 - Developed 20 automated tests in `tests/` covering retrieval, pipeline stages, sliding-window rate limiting, simulator determinism, metrics percentiles, and retry storm congestion.
 - Executed full 5-scenario benchmark suite generating 159 rows in `results/results.csv`.
 - Built Pandas analysis engine in `benchmarks/analyze_results.py` generating Tables 1, 2, and 3 in `report/tables.md`.
+

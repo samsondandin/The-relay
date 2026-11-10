@@ -167,3 +167,4 @@ class DocumentProcessor:
 
         logger.info(f"Processed and saved {len(all_chunks)} chunks for config {config_name} to {out_file}")
         return all_chunks
+

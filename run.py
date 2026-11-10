@@ -34,10 +34,11 @@ def main():
         asyncio.run(run_all_benchmarks())
 
     elif args.command == "eval":
-        from benchmarks.run_benchmarks import run_evaluation_set
+        from benchmarks.manual_eval import run_evaluation_review
         import asyncio
-        asyncio.run(run_evaluation_set())
+        asyncio.run(run_evaluation_review(interactive=False, setting="B"))
 
 
 if __name__ == "__main__":
     main()
+

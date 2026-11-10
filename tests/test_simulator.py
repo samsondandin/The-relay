@@ -44,3 +44,4 @@ async def test_simulator_refusal_generation():
     resp = await sim.generate("What is the battery life of Apple Vision Pro?")
     assert resp.refusal is True
     assert "REFUSAL:" in resp.content
+

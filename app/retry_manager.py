@@ -100,3 +100,4 @@ class RetryManager:
                     f"Transient failure ({type(e).__name__}: {e}). Retrying ({retries}/{self.max_retries}) after {wait_sec:.2f}s."
                 )
                 await asyncio.sleep(wait_sec)
+

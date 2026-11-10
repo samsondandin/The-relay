@@ -215,3 +215,4 @@ class LoadGenerator:
             await asyncio.gather(*tasks)
 
         return results
+

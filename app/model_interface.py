@@ -41,3 +41,4 @@ class ModelInterface(ABC):
     ) -> AsyncIterator[Dict[str, Any]]:
         """Stream generation tokens as they arrive."""
         pass
+

@@ -107,3 +107,4 @@ class BenchmarkRecord(BaseModel):
     concurrency: int = 0
     cost_usd: float = 0.0
     configuration_id: str = "B"
+

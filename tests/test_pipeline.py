@@ -81,3 +81,4 @@ async def test_ask_streaming():
         text = resp.text
         assert "data:" in text
         assert "[DONE]" in text
+

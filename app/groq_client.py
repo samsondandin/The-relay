@@ -169,3 +169,4 @@ class GroqClient(ModelInterface):
                 "first_token_ms": first_token_ms,
                 "elapsed_ms": (t_now - t_start) * 1000.0,
             }
+

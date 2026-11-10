@@ -76,3 +76,4 @@ The `RetryManager` enforces bounded exponential backoff with full jitter (max 1 
 
 ## 12. How I worked with the assistant
 I approached this task by maintaining strict separation of concerns, writing comprehensive automated tests before and during implementation, and executing real benchmarks to populate `results/results.csv`. Every latency percentile, refusal rate, and token count in this report is derived from reproducible local test executions.
+

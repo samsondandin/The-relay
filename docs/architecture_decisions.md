@@ -24,3 +24,4 @@
 - **Context**: The system must run either against hosted Groq LPUs or against a local stand-in model simulator without code modifications in the core application.
 - **Decision**: Implemented an abstract base class `ModelInterface` with `generate` and `stream_generate` methods. `app/main.py` dynamically injects `GroqClient` when `GROQ_API_KEY` is present and `MODEL_PROVIDER=groq`, or `ModelSimulator` otherwise.
 - **Consequences**: Zero change to application endpoints, pipeline logic, or telemetry when alternating between real and simulated backends.
+
